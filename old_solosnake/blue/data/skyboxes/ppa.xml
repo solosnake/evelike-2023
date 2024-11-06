@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<skybox>
+		<texture positive_x="ppa_xp.bmp"/>
+		<texture positive_y="ppa_yp.bmp"/>
+		<texture positive_z="ppa_zp.bmp"/>
+		<texture negative_y="ppa_yn.bmp"/>
+		<texture negative_x="ppa_xn.bmp"/>
+		<texture negative_z="ppa_zn.bmp"/>
+</skybox>

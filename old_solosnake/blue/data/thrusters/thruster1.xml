@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<thrusters version="1.0">
+    <!---->
+    <thruster name="thruster1" model="thruster" modelfile="thrustermodel.lua" hullhitpoints="500" mass="15" category="propulsion" Metals="1" NonMetals="1" SemiMetals="1" Alkalis="1" complexity="0" emiss_col_0="8978176" emiss_col_1="8978176" emiss_intysrc_0a="One" emiss_intysrc_0b="One" emiss_intysrc_1a="One" emiss_intysrc_1b="One" power="200" />
+</thrusters>

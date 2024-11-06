@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<screen type="menu">
+	<view name="FLEETSMENUVIEW">
+		<gui version="1.0">
+			<!--- 
+        SCREEN API:         
+        set_host_ip( "" )
+        set_host_port( 2001 )
+        set_num_players( 3 )
+        exit_screen("playgame")
+        -->
+
+			<!-- VKEY CODES:
+        VK_ENTER    13
+        VK_LEFT 	37 	LEFT ARROW key
+        VK_UP 	    38 	UP ARROW key
+        VK_RIGHT 	39 	RIGHT ARROW key
+        VK_DOWN 	40 	DOWN ARROW key
+        -->
+
+			<widget
+				type="textbutton"
+				name="MAINMENU"
+				x="100"
+				y="150"
+				width="128"
+				height="128"
+				text_id="MAIN&#10;MENU"
+				textsize="1"
+				style="bluestyle.xml">
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen("main.xml")
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+
+			<!-- Background widget -->
+			<widget
+				type="skyboxbackground"
+				name="BACKGROUND"
+				skyboxfile="pp.xml"
+				rotaterate="0.00001"
+				axisx="2.0"
+				axisy="1.0"
+				axisz="0.0">
+				<on_init>
+					mouseoversound = load_sound( "sub_bass_mouseover1.wav" )
+					clicksound = load_sound( "simple_resonant_click.wav" )
+				</on_init>
+				<on_key_pressed>
+				</on_key_pressed>
+				<on_screen_resized>
+					local gap = 8
+					local size = (height - (gap * 3)) / (5 * 0.866)
+					local border = 32;
+					local playx = border
+					local playy = height - border - size - border
+					MAINMENU:set_screen_quad( playx, playy, size, size )
+				</on_screen_resized>
+			</widget>
+		</gui>
+	</view>
+</screen>

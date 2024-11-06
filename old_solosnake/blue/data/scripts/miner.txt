@@ -1,0 +1,48 @@
+1
+2
+3
+4
+5
+6
+7
+8
+9
+sense(1)
+[1] = get_sense_result_count()      //          Sense
+if [1] < 2 goto 15                  //          Nothing sensed, goto wait for orders
+[1] = get_sense_result_type(1)      
+if [1] == 2 goto 36                 //          2 == HEX_CONTENT_ASTEROID, do some mining
+[1] = get_msgs_count()              //          Wait for orders
+if ![1] goto 15                     //          No orders, do busy waiting.
+move_msg_to_msgbuf(0)
+clear_msgs()
+print( "NEW" )
+[19] = get_location()
+copy_code_from_msgbuf( 1, 22, 10 )  // Copy 10 lines beginning at line 0 to lines.
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+0
+[32] = get_location()
+if [32] == [19] goto 15             //          We didn't move, wait for next command.
+goto 10
+[2] = get_sense_result_location(1)
+navigate_to([2])                    //          Move
+aim_at([2])                         //          Aim
+[3] = can_aim_at([2])               //          How many can fire at target.
+[4] = can_fire_at([2])              //          How many can fire at target.
+if [3] != [4] goto 40               //          Loop until all hardpoints are aimed.
+[4] = get_cargohold_freespace()     //          
+print("space")                      //          
+print([4])                          //          Print free space.
+fire_at([2])                        //          Mine
+[4] = get_cargohold_freespace()
+print("after")
+print([4])                          //          Print new free space.

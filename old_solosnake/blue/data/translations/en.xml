@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<translations>
+<!-- 
+	English translation file: this is used to disambiguate some texts.
+	When both sides of the text are the same the text can be omittied.
+-->
+<text en="PLAY" local="PLAY"/>
+</translations>

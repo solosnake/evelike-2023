@@ -1,0 +1,6 @@
+component_type	name	model	modelfile	category	type	kin	therm	em	nuke	other	hullhitpoints	mass	reliability	falloff	minangle	maxangle	minrange	maxrange	rotatespeed	elevationspeed	cooldown	capcost	emiss_col_0	emiss_col_1	emiss_intysrc_0a	emiss_intysrc_0b	emiss_intysrc_1a	emiss_intysrc_1b	Metals	NonMetals	SemiMetals	Alkalis	complexity
+hardpoint	laser	gun3	gun3.lua	offensive	gun	50	100	150	200	0	120	22	50	100	0	180	1	4	8000	100	10	125	0xFFFFFFFF	0xFFFFFFFF	CapacitorLvl	CapacitorLvl	CapacitorLvl	CapacitorLvl	1	1	1	1	0
+hardpoint	drainer	gun3	gun3.lua	offensive	drain	0	0	0	0	111	120	22	50	50	0	180	1	4	8000	100	10	125	0xFFFFFFFF	0xFFFFFFFF	CapacitorLvl	CapacitorLvl	CapacitorLvl	CapacitorLvl	1	1	1	1	0
+hardpoint	capper	gun3	gun3.lua	industrial	cap	0	0	0	0	222	120	22	50	150	0	180	1	4	8000	100	10	125	0xFFFFFFFF	0xFFFFFFFF	CapacitorLvl	CapacitorLvl	CapacitorLvl	CapacitorLvl	1	1	1	1	0
+hardpoint	repper	gun3	gun3.lua	defensive	rep	0	0	0	0	333	120	22	50	150	0	180	1	4	8000	100	10	125	0xFFFFFFFF	0xFFFFFFFF	CapacitorLvl	CapacitorLvl	CapacitorLvl	CapacitorLvl	1	1	1	1	0
+hardpoint	miner	gun3	gun3.lua	industrial	miner	0	0	0	0	444	120	22	50	150	0	180	1	4	8000	100	10	125	0xFF000000	0xFF000000	CapacitorLvl	CapacitorLvl	CapacitorLvl	CapacitorLvl	1	1	1	1	0

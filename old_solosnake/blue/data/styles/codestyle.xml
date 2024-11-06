@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<style>
+	<font size="-2"
+				file="code12.xml"/>
+	<font size="-1"
+				file="code18.xml"/>
+	<font size="0"
+				file="code24.xml"/>
+	<font size="1"
+				file="code32.xml"/>
+	<font size="2"
+				file="code36.xml"/>
+	<font size="3"
+				file="code48.xml"/>
+	<checkboxes>
+		<checked texture="checkbox.bmp" x0="0.0" y0="0.0" x1="0.5" y1="1.0" bgra="0x00C8C8C8" />
+		<unchecked texture="checkbox.bmp" x0="0.5" y0="0.0" x1="1.0" y1="1.0" bgra="0x00C8C8C8" />
+	</checkboxes>
+	<buttons>
+		<disabled textbgra="0x00C800C8" />
+		<normal textbgra="0x00C800C8" />
+		<highlighted textbgra="0x00D800C8" />
+		<activated textbgra="0x00C800C8" />
+	</buttons>
+	<actionbar>
+		<background texture="actionbar.bmp" x0="0.0" y0="0.0" x1="1.0" y1="1.0" bgra="0x00C8C8C8" />
+	</actionbar>
+</style>

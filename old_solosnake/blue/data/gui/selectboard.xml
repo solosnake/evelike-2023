@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<screen type="menu">
+	<view name="SELECTBOARDVIEW">
+		<gui version="1.0">
+
+			<widget
+				type="filelist"
+				folder=""
+				name="FILELIST"
+				x="100"
+				y="150"
+				width="128"
+				height="128"
+				textsize="1"
+				style="bluestyle.xml">
+				<on_file_selected>
+					set_boardfilename( filename )
+					exit_screen("boards.xml")
+				</on_file_selected>
+			</widget>
+
+			<!-- Background widget -->
+			<widget
+				type="skyboxbackground"
+				name="BACKGROUND"
+				skyboxfile="pp.xml"
+				rotaterate="0.00001"
+				axisx="2.0"
+				axisy="1.0"
+				axisz="0.0">
+				<on_init>
+					mouseoversound = load_sound( "sub_bass_mouseover1.wav" )
+					clicksound = load_sound( "simple_resonant_click.wav" )
+				</on_init>
+				<on_key_pressed>
+				</on_key_pressed>
+				<on_screen_resized>
+				</on_screen_resized>
+			</widget>
+		</gui>
+	</view>
+</screen>

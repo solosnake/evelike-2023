@@ -1,0 +1,60 @@
+[4] = get_location()                    // Record starting location.
+lock_cargohold( 1 )                     // We are not a shop :)
+goto 13                                 // Dont do random move at startup.
+0                                       // Start location.
+0                                       // Turn direction variable.
+0                                       // Turn count.
+0                                       // Movement count.
+[5] = get_random( 0, 1 )                // Turn direction
+[6] = get_random( 1, 5 )                // Turn count
+[7] = get_random( 2, 4 )                // Movement
+turn( [5], [6] )    
+advance( [7] )      
+sense(4)                                // Search for nearby asteroid
+0                                       // Sense results count
+0                                       // Sense result type
+[14] = get_sense_result_count()         // 
+[14] = [14] - 1                         // Examine the further sense result.
+if [14] < 2 goto 8                      // Nothing sensed but ourself, goto random move.
+[15] = get_sense_result_type([14])      // What did we sense?
+if [15] != 2 goto 17                    // If not 2 (HEX_CONTENT_ASTEROID) check next result.
+[14] = get_sense_result_location([14])  // Where is asteroid?
+navigate_to([14])                       // Auto move to asteroid.
+aim_at([14])                            // Aim at asteroid.
+0   
+0   
+0
+[25] = can_fire_at([14])                // How many can fire at target.
+0
+0   
+[29] = get_cargohold_freespace()        //          
+print("space")                          //          
+print([29])                             // Print free space.
+fire_at([14])                           // Fire mining lasers at asteroid.
+[29] = get_cargohold_freespace()    
+print("after")  
+print([29])                             // Print new free space.
+navigate_to([4])                        // Auto move back to start.
+sense(1)                                // Look for nearby shop.
+[14] = get_sense_result_location(1)     // Where is shop (assuming its the shop!)
+[15] = get_sense_result_count()         // 
+if [15] > 1 goto 44                     // If cap is too low then sleep for a bit
+print("LOW")
+goto 38                                 // Repeat sense, search for shop ship.
+print("ORE")
+refine( 10, 0 )
+refine( 10, 1 )
+refine( 10, 2 )
+refine( 10, 3 )
+print("DLVRY")
+lock_cargohold( 0 )
+give_cargo_to( [14], 4, 10 )
+give_cargo_to( [14], 5, 10 )
+give_cargo_to( [14], 6, 10 )
+give_cargo_to( [14], 7, 10 )
+lock_cargohold( 1 )
+[15] = get_cargohold_spaceused()
+print("USED")
+print([15])
+if [15] > 0 goto 44
+goto 13

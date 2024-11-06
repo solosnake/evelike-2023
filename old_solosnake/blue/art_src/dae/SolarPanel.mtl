@@ -1,0 +1,77 @@
+newmtl ThrusterSG1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Thruster_PA_512_C.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks Thruster_PA_512_C.png
+newmtl blinn17SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd CPU_C.png
+bump CPU_N.png -bm 1
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks CPU_S.png
+newmtl blinn18SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Thruster_C.png
+bump Thruster_N.png -bm 1
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks Thruster_S.png
+newmtl blinn19SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Capacitor_C.PNG
+Ni 1.00
+Ks 0.50 0.50 0.50
+newmtl blinn20SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd RadarDome_C.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+newmtl blinn21SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd NuclearReactor_C.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+newmtl initialShadingGroup
+illum 4
+Kd 0.27 0.27 0.27
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lambert136SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd SolarPanel_C.png
+bump SolarPanel_N.png -bm 1
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks SolarPanel_S.png
+newmtl lambert142SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Capacitor_C.PNG
+Ni 1.00
+Ks 0.50 0.50 0.50

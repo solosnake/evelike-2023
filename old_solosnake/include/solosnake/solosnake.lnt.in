@@ -1,0 +1,18 @@
+// This file is read and used by CMake to generate a project specific Lint options file in the root directory.
+-message(Using solosnake.lnt)
+
+-passes(1)
+
+// Set warning level
+-w1
+
+// But allow messages:
++e865
+
+// consider string constants as const char *
++fsc
+
+// turn on "virtual call from member detection"
++e1933  
+
+solosnake-lint-config.lnt

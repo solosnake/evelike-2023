@@ -1,0 +1,2 @@
+component_type	name	model	modelfile	category	hullhitpoints	mass	power	emiss_col_0	emiss_col_1	emiss_intysrc_0a	emiss_intysrc_0b	emiss_intysrc_1a	emiss_intysrc_1b	Metals	NonMetals	SemiMetals	Alkalis	complexity
+thruster	thruster1	thruster	thrustermodel.lua	propulsion	500	15	200	0x0088FF00	0x0088FF00	1	1	1	1	1	1	1	1	0

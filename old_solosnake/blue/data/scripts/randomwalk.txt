@@ -1,0 +1,9 @@
+goto 5             	// Jump past data blocks
+0                	// Turn direction variable.
+0                	// Turn count.
+0                	// Movement count.
+[2] = get_random( 0, 1 ) 	// Turn direction
+[3] = get_random( 1, 5 ) 	// Turn count
+[4] = get_random( 1, 4 ) 	// Movement
+turn( [2], [3] )
+advance( [4] )   

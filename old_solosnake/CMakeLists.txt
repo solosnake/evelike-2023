@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.1)
+
+#add_subdirectory (freetype-2.4.9)
+add_subdirectory (src)
+#add_subdirectory (fontmaker)
+#add_subdirectory (meshmaker)
+#add_subdirectory (datamaker)
+#add_subdirectory (meshviewer)
+#add_subdirectory (test_solosnake)
+#add_subdirectory (test_lunar)
+#add_subdirectory (test_gui)
+add_subdirectory (blue)

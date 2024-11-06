@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<screen type="game">
+	<view name="GAMEVIEW">
+		<gui version="1.0">
+			
+			<widget
+				type="instructionbutton"
+				name="LEFT"
+				x="100"
+				y="400"
+				width="100"
+				height="32"
+				text_id="LEFT"
+				textsize="1"
+				style="bluestyle.xml">
+				<instructions>
+					<i>print( "LEFT" )</i>
+					<i>turn( 0, 1 )</i>
+				</instructions>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+				<on_clicked>
+					play_sound( clicksound )
+				</on_clicked>
+				<on_screen_resized>
+					local x = (width / 2) - 50 - 32 - 100
+					local y = height - 64;
+					LEFT:set_screen_quad( x, y, 100, 32 );
+				</on_screen_resized>
+			</widget>
+
+			<widget
+				type="instructionbutton"
+				name="ADVANCE"
+				x="340"
+				y="400"
+				width="100"
+				height="32"
+				text_id="ADVANCE"
+				textsize="1"
+				style="bluestyle.xml">
+				<instructions>
+					<i>print( "MOVE" )</i>
+					<i>advance( 1 )</i>
+				</instructions>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+				<on_clicked>
+					play_sound( clicksound )
+				</on_clicked>
+				<on_screen_resized>
+					local x = (width / 2) - 50;
+					local y = height - 64;
+					ADVANCE:set_screen_quad( x, y, 100, 32 );
+				</on_screen_resized>
+			</widget>
+
+			<widget
+				type="instructionbutton"
+				name="RIGHT"
+				x="220"
+				y="400"
+				width="100"
+				height="32"
+				text_id="RIGHT"
+				textsize="1"
+				style="bluestyle.xml">
+				<instructions>
+					<i>print( "RIGHT" )</i>
+					<i>turn( 1, 1 )</i>
+				</instructions>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+				<on_clicked>
+					play_sound( clicksound )
+				</on_clicked>
+				<on_screen_resized>
+					local x = (width / 2) + 50 + 32;
+					local y = height - 64;
+					RIGHT:set_screen_quad( x, y, 100, 32 );
+				</on_screen_resized>
+			</widget>
+
+			<widget
+				type="textbutton"
+				name="MAINMENU"
+				x="100"
+				y="400"
+				width="196"
+				height="32"
+				text_id="MAIN MENU"
+				textsize="1"
+				style="bluestyle.xml">
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen( "main.xml" )
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+				<on_screen_resized>
+					local x = (width / 2) - 400 + 32;
+					local y = height - 64;
+					MAINMENU:set_screen_quad( x, y, 196, 32 );
+				</on_screen_resized>
+			</widget>
+
+			<widget
+				type="actionbar"
+				name="ACTIONBAR"
+				x="100"
+				y="400"
+				width="196"
+				height="32"
+				style="bluestyle.xml">
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen( "main.xml" )
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+				<on_screen_resized>
+					local x = (width / 2) - 400 + 32;
+					local y = height - 64;
+					ACTIONBAR:set_screen_quad( x, y, 196, 32 );
+				</on_screen_resized>
+			</widget>
+			
+			<!-- Background widget -->
+			<widget 
+				type="boardbackground"
+				name="boardbackground" >
+				<on_init>
+					mouseoversound = load_sound( "sub_bass_mouseover1.wav" )
+					clicksound = load_sound( "simple_resonant_click.wav" )
+				</on_init>
+				<on_key_pressed>
+					if key == 9 then
+					set_active_view( "CODEVIEW" )
+					end
+				</on_key_pressed>
+			</widget>
+		</gui>
+	</view>
+
+	<view name="EDITORVIEW">
+		<gui version="1.0">
+
+			<widget
+				type="codeeditor"
+				name="EDITOR"
+				x="0"
+				y="0"
+				width="400"
+				height="400"
+				textsize="0"
+				style="codestyle.xml">
+				<on_screen_resized>
+					EDITOR:set_screen_quad( 0, 0, (width / 2), height )
+				</on_screen_resized>
+				<on_text_received>
+					print( wchar )
+				</on_text_received>
+				<on_key_pressed>
+					print( "Pressed " .. key )
+					if key == 9 then
+					set_active_view( "GAMEVIEW" )
+					end
+				</on_key_pressed>
+			</widget>
+
+			<widget
+				type="boardbackground"
+				name="editorboardbackground" >
+				<on_init>
+				</on_init>
+				<on_key_pressed>
+					if key == 9 then
+					set_active_view( "GAMEVIEW" )
+					end
+				</on_key_pressed>
+			</widget>
+		</gui>
+	</view>
+	
+	<view name="CODEVIEW">
+		<gui version="1.0">
+			<widget
+				type="codeinspector"
+				name="CODER"
+				x="0"
+				y="0"
+				width="400"
+				height="400"
+				textsize="0"
+				style="codestyle.xml">
+				<on_screen_resized>
+					CODER:set_screen_quad( 0, 0, (width / 2), height )
+				</on_screen_resized>
+				<on_text_received>
+					print( wchar )
+				</on_text_received>
+				<on_key_pressed>
+					print( "Pressed " .. key )
+					if key == 9 then
+					set_active_view( "EDITORVIEW" )
+					end
+				</on_key_pressed>
+			</widget>
+			<widget 
+				type="boardbackground"
+				name="codeviewboardbackground" >
+				<on_init>
+				</on_init>
+				<on_key_pressed>
+					if key == 9 then
+					set_active_view( "EDITORVIEW" )
+					end
+				</on_key_pressed>
+			</widget>
+		</gui>
+	</view>
+</screen>
+

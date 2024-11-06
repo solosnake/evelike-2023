@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<persistance version="0.1">
+        <entry key="app-title" value="blue">
+            <!--Application title.-->
+        </entry>
+        <entry key="first-screen" value="mainmenu.xml">
+            <!--The first screen shown by the application. Default:mainmenu-->
+        </entry>
+        <entry key="safestart-height" value="480">
+            <!--Default safe window starting height. Default:480-->
+        </entry>
+        <entry key="safestart-width" value="640">
+            <!--Default safe window starting width. Default:640-->
+        </entry>
+        <entry key="safestart-window-type" value="opengl 3.3">
+            <!--Default safe graphical window type. opengl. Default:opengl 3.3-->
+        </entry>
+        <entry key="window-height" value="1080" />
+        <entry key="window-width" value="1920" />
+</persistance>

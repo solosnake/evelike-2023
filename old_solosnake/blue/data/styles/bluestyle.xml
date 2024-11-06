@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<style>
+	<font size="-1" file="RUSSIAN1_12.xml"/>
+	<font size="0"  file="RUSSIAN1_18.xml"/>
+	<font size="1"  file="RUSSIAN1_24.xml"/>
+	<font size="2"  file="RUSSIAN1_36.xml"/>
+	<font size="3"  file="RUSSIAN1_48.xml"/>
+	<font size="4"  file="RUSSIAN1_60.xml"/>
+	<checkboxes>
+		<checked   texture="checkbox.bmp" x0="0.0" y0="0.0" x1="0.5" y1="1.0" bgra="0x00C8C8C8" />
+		<unchecked texture="checkbox.bmp" x0="0.5" y0="0.0" x1="1.0" y1="1.0" bgra="0x00C8C8C8" />
+	</checkboxes>
+	<actionbar bordersize="4" buttonsize="64">
+		<normal      bgra="0xAAAAAAFF" />
+		<highlighted bgra="0xFFFFFFFF" />
+		<disabled    bgra="0xC8C8C8FF" />
+		<activated   bgra="0xF4F4F4FF"/>
+		<background texture="actionbar.bmp" x0="0.0" y0="0.0" x1="1.0" y1="1.0" bgra="0x00C8C8C8" />
+	</actionbar>
+	<buttons>
+		<disabled textbgra="0x7F7F7F7F" >
+			<base texture="stripedroundedbutton.bmp"    x0="1.0" y0="0.0" x1="0.0" y1="1.0" bgra="0x00007F7F" />
+		</disabled>
+		<normal textbgra="0xC8C8C8C8" >
+			<base texture="stripedroundedbutton.bmp"    x0="1.0" y0="0.0" x1="0.0" y1="1.0" bgra="0x0000C8C8" />
+		</normal>
+		<highlighted textbgra="0xFFFFFFFF" >
+			<base texture="stripedroundedbutton.bmp"    x0="1.0" y0="0.0" x1="0.0" y1="1.0" bgra="0x0000C8FF" />
+		</highlighted>
+		<activated textbgra="0xFFFFFFFF" >
+			<base texture="stripedroundedbutton.bmp"    x0="1.0" y0="0.0" x1="0.0" y1="1.0" bgra="0x00C8C8C8" />
+			<!-- 
+				<overlay texture="button.bmp" x0="0.25" y0="0.5" x1="0.50" y1="1.0" bgra="0xFF00FFFF" />
+            -->
+		</activated>
+	</buttons>
+</style>

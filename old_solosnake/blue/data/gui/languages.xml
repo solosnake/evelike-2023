@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<screen type="menu">
+	<view name="STARTMENUVIEW">
+		<gui version="1.0">
+			<widget
+				type="checkbutton"
+				name="ENGLISH"
+				checked="true"
+				x="100"
+				y="150"
+				width="256"
+				height="64"
+				text_id="English"
+				textsize="3"
+				style="bluestyle.xml">
+				<on_init>
+					local check = (get_language_filename() == "en.xml") or (get_language_filename() == "");
+					ENGLISH:set_button_checked( check );
+				</on_init>
+				<on_clicked>
+					ENGLISH:set_button_checked( true );
+					play_sound( clicksound )
+					print( "CLICKED" )
+				</on_clicked>
+				<on_check_changed>
+					if( checked ) then
+						set_language_filename( "en.xml" )
+						SVENSK:set_button_checked( false );
+						RUSSIAN:set_button_checked( false );
+					end
+				</on_check_changed>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+			<widget
+				type="checkbutton"
+				name="SVENSK"
+				checked="true"
+				x="100"
+				y="200"
+				width="256"
+				height="64"
+				text_id="Svensk"
+				textsize="3"
+				style="bluestyle.xml">
+				<on_init>
+					local check = (get_language_filename() == "sv.xml");
+					SVENSK:set_button_checked( check );
+				</on_init>
+				<on_clicked>
+					SVENSK:set_button_checked( true );
+					play_sound( clicksound )
+					print( "CLICKED" )
+				</on_clicked>
+				<on_check_changed>
+					if( checked ) then
+						set_language_filename( "sv.xml" )
+						ENGLISH:set_button_checked( false );
+						RUSSIAN:set_button_checked( false );
+					end
+				</on_check_changed>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+			<widget
+				type="checkbutton"
+				name="RUSSIAN"
+				checked="true"
+				x="100"
+				y="250"
+				width="256"
+				height="64"
+				text_id="Russian"
+				textsize="3"
+				style="bluestyle.xml">
+				<on_init>
+					local check = (get_language_filename() == "ru.xml");
+					RUSSIAN:set_button_checked( check );
+				</on_init>
+				<on_clicked>
+					set_language_filename( "ru.xml" )
+					RUSSIAN:set_button_checked( true );
+					play_sound( clicksound )
+					print( "CLICKED" )
+				</on_clicked>
+				<on_check_changed>
+					if( checked ) then
+						ENGLISH:set_button_checked( false );
+						SVENSK:set_button_checked( false );
+					end
+				</on_check_changed>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+			<widget
+				type="textbutton"
+				name="BACK"
+				x="100"
+				y="200"
+				width="256"
+				height="64"
+				text_id="BACK"
+				textsize="3"
+				style="bluestyle.xml">
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen("options.xml")
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+			<!-- Background widget -->
+			<widget
+				type="skyboxbackground"
+				name="BACKGROUND"
+				skyboxfile="pp.xml"
+				rotaterate="0.00001"
+				axisx="2.0"
+				axisy="1.0"
+				axisz="0.0">
+				<on_init>
+					mouseoversound = load_sound( "sub_bass_mouseover1.wav" )
+					clicksound = load_sound( "simple_resonant_click.wav" )
+				</on_init>
+				<on_key_pressed>
+				</on_key_pressed>
+				<on_screen_resized>
+					print( "SCREEN RESIZED" );
+					print( width );
+					print( height );
+					local buttonheight = 64;
+					local gap = 8;
+					local border = 32;
+					local buttonwidth = width / 2;
+					local centrex = width / 2;
+					local centrey = height / 5;
+					local left = centrex - (buttonwidth / 2);
+					local down = centrey;
+					
+					local x, y = left, down;
+					
+					ENGLISH:set_screen_quad( x, y, buttonwidth, buttonheight );
+					y = y + buttonheight + gap;
+					
+					SVENSK:set_screen_quad( x, y, buttonwidth, buttonheight );
+					y = y + buttonheight + gap;
+					
+					RUSSIAN:set_screen_quad( x, y, buttonwidth, buttonheight );
+					y = y + buttonheight + gap;
+					
+					--[[ BACK is a little lower down --]]
+					y = y + buttonheight + gap;
+					BACK:set_screen_quad( x, y, buttonwidth, buttonheight );
+				</on_screen_resized>
+			</widget>
+		</gui>
+	</view>
+</screen>

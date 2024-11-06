@@ -1,0 +1,23 @@
+
+
+
+
+print( "start" )
+[1] = get_sense_range()
+print("range")
+print([1])
+sense([1])
+[2] = get_sense_result_count()
+if [2] > 1 goto 20 
+[3] = get_random()
+[3] = [3] % 2
+turn( [3], 1 )
+advance( 1 )
+print( "moved" )
+goto 9
+
+
+[19] = [2] - 1  // Navigate to furthest away sensed object.
+[3] = get_sense_result_location([19])
+navigate_to( [3] )
+print( "astar" )

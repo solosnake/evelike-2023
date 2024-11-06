@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<manifest version="1.0">
+<item name="capper.xml"/>
+<item name="drainer.xml"/>
+<item name="laser.xml"/>
+<item name="miner.xml"/>
+<item name="repper.xml"/>
+</manifest>

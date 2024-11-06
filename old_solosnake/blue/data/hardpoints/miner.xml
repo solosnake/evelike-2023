@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hardpoints version="1.0">
+    <!---->
+    <hardpoint name="miner" model="gun3" modelfile="gun3.lua" hullhitpoints="120" mass="22" category="industrial" Metals="1" NonMetals="1" SemiMetals="1" Alkalis="1" complexity="0" emiss_col_0="-16777216" emiss_col_1="-16777216" emiss_intysrc_0a="CapacitorLvl" emiss_intysrc_0b="CapacitorLvl" emiss_intysrc_1a="CapacitorLvl" emiss_intysrc_1b="CapacitorLvl" minrange="1" maxrange="4" minangle="0" maxangle="180" rotatespeed="8000" elevationspeed="100" cooldown="10" capcost="125" falloff="150" reliability="50" type="miner" other="444" />
+</hardpoints>

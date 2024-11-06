@@ -1,0 +1,24 @@
+0
+[1] = get_msgs_count()
+if ![1] goto 1      
+move_msg_to_msgbuf(0)
+clear_msgs()
+print("MSG!")
+copy_code_from_msgbuf( 1, 12, 10 )// Copy 10 lines beginning at line 0 to lines 12+.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

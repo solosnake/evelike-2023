@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<manifest version="1.0">
+	<item name="en.xml"/>
+	<item name="is.xml"/>
+	<item name="dk.xml"/>
+	<item name="sv.xml"/>
+	<item name="no.xml"/>
+	<item name="ru.xml"/>
+</manifest>

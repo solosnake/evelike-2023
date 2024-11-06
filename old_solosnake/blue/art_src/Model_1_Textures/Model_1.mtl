@@ -1,0 +1,13 @@
+newmtl blinn1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Model_1_C.bmp
+map_d Model_1_TC.bmp
+bump Model_1_N.bmp -bm 1
+map_Ka Model_1_AO.bmp
+map_Ns Model_1_S.bmp
+map_Ks Model_1_E.bmp
+Ni 1.00
+Ks 0.50 0.50 0.50

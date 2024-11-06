@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<manifest version="1.0">
+<item name="capacitor.xml"/>
+<item name="comms.xml"/>
+<item name="cpu.xml"/>
+<item name="electronics.xml"/>
+<item name="generic01.xml"/>
+<item name="generic02.xml"/>
+<item name="generic03.xml"/>
+<item name="radar.xml"/>
+<item name="radardome.xml"/>
+<item name="reactor.xml"/>
+<item name="solarpanels.xml"/>
+<item name="solarsails.xml"/>
+</manifest>

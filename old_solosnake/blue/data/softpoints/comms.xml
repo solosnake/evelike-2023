@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<softpoints version="1.0">
+    <!---->
+    <softpoint name="comms" model="comms" modelfile="commsmodel.lua" hullhitpoints="1000" mass="10" category="dualuse" Metals="1" NonMetals="1" SemiMetals="1" Alkalis="1" complexity="0" emiss_col_0="-503382272" emiss_col_1="-503382272" emiss_intysrc_0a="CapacitorLvl" emiss_intysrc_0b="TransmittingLvl" emiss_intysrc_1a="CapacitorLvl" emiss_intysrc_1b="TransmittingLvl">
+        <hardwaremodifier>
+            <deltas delta_max_sensing_radius="4" delta_tiles_sensed_per_10_ticks="6" delta_cap_instruction_cost="5" delta_cap_firing_cost="10" delta_max_firing_range="5" delta_armour_hitpoints="100" delta_max_stored_messages="5" delta_cargohold_volume="5" />
+            <factors factor_processor_speed_cycles_per_tick="1.01" />
+        </hardwaremodifier>
+    </softpoint>
+</softpoints>

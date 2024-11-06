@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<persistance version="0.1">
+    <entry key="clean-run" value="true">
+    </entry>
+    <entry key="fullscreen" value="false">
+    </entry>
+</persistance>

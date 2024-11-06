@@ -1,0 +1,31 @@
+
+
+
+
+
+sense(5)
+[1] = get_sense_result_count()
+print([1])
+[2] = get_sense_result_location(1)
+print([2])
+[3] = has_line_of_fire_to([2])
+print("LOF")
+print([3])
+[5] = get_location()
+[4] = get_distance_between([2],[5])
+print("DIST")
+print([4])
+[3] = can_aim_at([2])
+print("AIMS")
+print([3])
+print("AT")
+print([2])
+aim_at([2])
+print("AIMED")
+[3] = can_fire_at([2])
+print("FIRES")
+print([3])
+print("AT")
+print([2])
+fire_at([2])
+print("FIRED")

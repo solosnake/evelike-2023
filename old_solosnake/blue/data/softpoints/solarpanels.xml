@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<softpoints version="1.0">
+    <!---->
+    <softpoint name="solarpanels" model="solarpanels" modelfile="solarpanelsmodel.lua" hullhitpoints="800" mass="12" category="dualuse" Metals="1" NonMetals="1" SemiMetals="1" Alkalis="1" complexity="0" emiss_col_0="-503382272" emiss_col_1="-503382272" emiss_intysrc_0a="CapacitorLvl" emiss_intysrc_0b="One" emiss_intysrc_1a="CapacitorLvl" emiss_intysrc_1b="One">
+        <hardwaremodifier>
+            <deltas delta_cap_solar_panels_count="4" delta_cap_instruction_cost="1" />
+            <factors factor_processor_speed_cycles_per_tick="1.01" factor_cap_capacity="1.1" />
+        </hardwaremodifier>
+    </softpoint>
+</softpoints>

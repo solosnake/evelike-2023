@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<screen type="menu">
+	<view name="MAINMENU">
+		<gui version="1.0">
+			<widget
+				type="textbutton"
+				name="CAMPAIGN"
+				x="100"
+				y="150"
+				width="256"
+				height="64"
+				text_id="CONTINUE CAMPAIGN"
+				textsize="3"
+				style="bluestyle.xml">
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen("campaign.xml")
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+			<widget
+				type="textbutton"
+				name="MULTIPLAYER"
+				x="100"
+				y="150"
+				width="256"
+				height="64"
+				text_id="MULTI PLAYER"
+				textsize="3"
+				style="bluestyle.xml">
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen("multiplayer.xml")
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+			<widget
+				type="textbutton"
+				name="TITLE"
+				x="100"
+				y="200"
+				width="256"
+				height="64"
+				text_id="TITLE MENU"
+				textsize="3"
+				style="bluestyle.xml">
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen("title.xml")
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+			<!-- Background widget -->
+			<widget
+				type="skyboxbackground"
+				name="BACKGROUND"
+				skyboxfile="pp.xml"
+				rotaterate="0.00001"
+				axisx="2.0"
+				axisy="1.0"
+				axisz="0.0">
+				<on_init>
+					mouseoversound = load_sound( "sub_bass_mouseover1.wav" )
+					clicksound = load_sound( "simple_resonant_click.wav" )
+				</on_init>
+				<on_key_pressed>
+				</on_key_pressed>
+				<on_screen_resized>
+					local buttonheight = 64;
+					local gap = 8;
+					local border = 32;
+					local buttonwidth = width / 2;
+					local centrex = width / 2;
+					local centrey = height / 2;
+					local left = centrex - (buttonwidth / 2);
+					local down = centrey;
+					local spx, spy = left, down;
+					local mpx, mpy = left, spy + buttonheight + gap;
+					local titlex, titley = left, mpy + buttonheight + gap;
+					CAMPAIGN:set_screen_quad( spx, spy, buttonwidth, buttonheight );
+					MULTIPLAYER:set_screen_quad( mpx, mpy, buttonwidth, buttonheight );
+					TITLE:set_screen_quad( titlex, titley, buttonwidth, buttonheight );
+				</on_screen_resized>
+			</widget>
+		</gui>
+	</view>
+</screen>

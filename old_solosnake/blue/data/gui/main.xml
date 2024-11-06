@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<screen type="menu">
+	<view name="MAINMENU">
+		<gui version="1.0">
+        
+			<widget
+				type="textbutton"
+				name="CAMPAIGN"
+				x="100"
+				y="150"
+				width="256"
+				height="64"
+				text_id="CONTINUE CAMPAIGN"
+				textsize="2"
+				style="bluestyle.xml">
+				<on_clicked>
+					set_host_ip( "" )
+					set_host_port( 2013 )
+					set_num_players( 1 )
+					play_sound( clicksound )
+					set_game_file( "game0.xml" )
+					exit_screen("game.xml")
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+            
+			<widget
+				type="textbutton"
+				name="MULTIPLAYER"
+				x="100"
+				y="150"
+				width="256"
+				height="64"
+				text_id="MULTI PLAYER"
+				textsize="2"
+				style="bluestyle.xml">
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen("multiplayer.xml")
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+            
+            <widget
+				type="textbutton"
+				name="BOARDS"
+				x="100"
+				y="150"
+				width="256"
+				height="64"
+				text_id="BOARDS"
+				textsize="2"
+				style="bluestyle.xml">
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen("boards.xml")
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+            
+			<widget
+				type="textbutton"
+				name="BLUEPRINTS"
+				x="100"
+				y="150"
+				width="256"
+				height="64"
+				text_id="BLUEPRINTS"
+				textsize="2"
+				style="bluestyle.xml">
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen("blueprints.xml")
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+            
+			<widget
+				type="textbutton"
+				name="TITLE"
+				x="100"
+				y="200"
+				width="256"
+				height="64"
+				text_id="TITLE MENU"
+				textsize="2"
+				style="bluestyle.xml">
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen("title.xml")
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+            
+			<!-- Background widget -->
+			<widget
+				type="skyboxbackground"
+				name="BACKGROUND"
+				skyboxfile="pp.xml"
+				rotaterate="0.00001"
+				axisx="2.0"
+				axisy="1.0"
+				axisz="0.0">
+				<on_init>
+					mouseoversound = load_sound( "sub_bass_mouseover1.wav" )
+					clicksound = load_sound( "simple_resonant_click.wav" )
+				</on_init>
+				<on_key_pressed>
+				</on_key_pressed>
+				<!-- 
+				Divide the available height into the buttons and the gaps between the buttons.
+				The gaps are 25% of the button height. The button aspect ration is W:H 4:1.
+				With 5 buttons we need 7 + (5 x 4) = 27. We add an extra gap at the bottom for 
+				neatness which brings it to 28.
+				-->
+				<on_screen_resized>
+					if width > 0 and height > 0 then
+						local s = height / 28;
+
+						local bh = s * 4;
+						local bw = bh * 4;
+
+						local x1 = (width - bw) / 2;
+						local y1 = s;
+
+						local y2 = y1 + bh + s;
+						local y3 = y2 + bh + s;
+						local y4 = y3 + bh + s;
+						local y5 = y4 + bh + s;
+
+						CAMPAIGN:set_screen_quad(	 x1, y1, bw, bh );
+						MULTIPLAYER:set_screen_quad( x1, y2, bw, bh );
+						BOARDS:set_screen_quad(		 x1, y3, bw, bh );
+						BLUEPRINTS:set_screen_quad(  x1, y4, bw, bh );
+						TITLE:set_screen_quad(		 x1, y5, bw, bh );
+					end
+				</on_screen_resized>
+			</widget>
+		</gui>
+	</view>
+</screen>

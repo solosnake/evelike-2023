@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<skybox>
+		<texture positive_x="yello_right1.bmp"/>
+		<texture positive_y="yello_top3.bmp"/>
+		<texture positive_z="yello_front5.bmp"/>
+		<texture negative_y="yello_bottom4.bmp"/>
+		<texture negative_x="yello_left2.bmp"/>
+		<texture negative_z="yello_back6.bmp"/>
+</skybox>

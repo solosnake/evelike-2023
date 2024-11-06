@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<suns>
+	<sun type="0" tex="FireGradient.bmp" dx="0.00004" dy="0.000032" dr="0.00006" />
+	<sun type="1" tex="FireGradient.bmp" dx="0.00004" dy="0.000032" dr="0.00006" />
+	<sun type="2" tex="FireGradient.bmp" dx="0.00004" dy="0.000032" dr="0.00006" />
+	<sun type="3" tex="FireGradient.bmp" dx="0.00004" dy="0.000032" dr="0.00006" />
+</suns>

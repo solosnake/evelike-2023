@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<screen type="menu">
+	<view name="STARTVIEW">
+		<gui version="1.0">
+
+			<widget
+				type="text"
+				name="INSTRUCTIONS"
+				x="0"
+				y="0"
+				width="512"
+				height="128"
+				text_id="Select an existing campaign&#10;or start a new campaign"
+				textsize="2"
+				style="bluestyle.xml">
+			</widget>
+
+			<widget
+				type="picturebutton"
+				name="SAVE0"
+				x="0"
+				y="0"
+				width="256"
+				height="128"
+				texx="0"
+				texy="0"
+				texwidth="0.5"
+				texheight="0.25"
+				texname="savegame.bmp"
+				text_id="SAVE0"
+				textsize="2"
+				style="bluestyle.xml">
+				<on_init>
+					SAVE0:load_and_set_texture( "savegame.bmp" );
+					SAVE0:set_texture_quad( 0, 0, 0.5, 0.25 );
+				</on_init>
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen("main.xml")
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+
+			<widget
+				type="picturebutton"
+				name="SAVE1"
+				x="0"
+				y="0"
+				width="256"
+				height="128"
+				texx="0"
+				texy="0"
+				texwidth="0.5"
+				texheight="0.25"
+				texname="savegame.bmp"
+				text_id="SAVE1"
+				textsize="2"
+				style="bluestyle.xml">
+				<on_init>
+					SAVE1:load_and_set_texture( "savegame.bmp" );
+					SAVE1:set_texture_quad( 0, 0.25, 0.5, 0.5 );
+				</on_init>
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen("main.xml")
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+
+			<widget
+				type="picturebutton"
+				name="SAVE2"
+				x="0"
+				y="0"
+				width="256"
+				height="128"
+				texx="0"
+				texy="0"
+				texwidth="0.5"
+				texheight="0.25"
+				texname="savegame.bmp"
+				text_id="SAVE2"
+				textsize="2"
+				style="bluestyle.xml">
+				<on_init>
+					SAVE2:load_and_set_texture( "savegame.bmp" );
+					SAVE2:set_texture_quad( 0, 0.25, 0.5, 0.5 );
+				</on_init>
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen("main.xml")
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+
+			<widget
+				type="picturebutton"
+				name="SAVE3"
+				x="0"
+				y="0"
+				width="256"
+				height="128"
+				texx="0"
+				texy="0"
+				texwidth="0.5"
+				texheight="0.25"
+				texname="savegame.bmp"
+				text_id="SAVE3"
+				textsize="2"
+				style="bluestyle.xml">
+				<on_init>
+					SAVE3:load_and_set_texture( "savegame.bmp" );
+					SAVE3:set_texture_quad( 0, 0.25, 0.5, 0.5 );
+				</on_init>
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen("main.xml")
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+
+			<widget
+				type="picturebutton"
+				name="SAVE4"
+				x="0"
+				y="0"
+				width="256"
+				height="128"
+				texx="0"
+				texy="0"
+				texwidth="0.5"
+				texheight="0.25"
+				texname="savegame.bmp"
+				text_id="SAVE4"
+				textsize="2"
+				style="bluestyle.xml">
+				<on_init>
+					SAVE4:load_and_set_texture( "savegame.bmp" );
+					SAVE4:set_texture_quad( 0, 0.25, 0.5, 0.5 );
+				</on_init>
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen("main.xml")
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+
+			<widget
+				type="picturebutton"
+				name="SAVE5"
+				x="0"
+				y="0"
+				width="256"
+				height="128"
+				texx="0"
+				texy="0"
+				texwidth="0.5"
+				texheight="0.25"
+				texname="savegame.bmp"
+				text_id="SAVE5"
+				textsize="2"
+				style="bluestyle.xml">
+				<on_init>
+					SAVE5:load_and_set_texture( "ts5_5x5_norm_emiss.bmp" );
+					SAVE5:set_texture_quad( 0, 0.25, 0.5, 0.5 );
+				</on_init>
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen("main.xml")
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+
+			<widget
+				type="textbutton"
+				name="BACK"
+				x="100"
+				y="200"
+				width="256"
+				height="64"
+				text_id="BACK"
+				textsize="2"
+				style="bluestyle.xml">
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen("title.xml")
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+
+			<!--
+			Background widget
+			Spacing will be laid out vertically as S.TH.S.BH.S.BH.S.BH.S.BH.S.S 
+			where TH is title height (128) and there are 4 x BH and 7 x S.
+			We want the spaceing S to be 25% of a button height (BH).
+			So one BH is 4 x S so we divide the remaining height (height - TH) by (16+7) 23.
+			To keep the buttons textured nicely, the button width is a factor of the button height. 
+			The save button textures should be 256 x 128 in aspect ration.
+			-->
+			<widget
+				type="skyboxbackground"
+				name="PROFILEBACK"
+				skyboxfile="pp.xml"
+				rotaterate="0.00001"
+				axisx="2.0"
+				axisy="1.0"
+				axisz="0.0">
+				<on_screen_resized>
+					if width > 0 and height > 0 then
+
+						local titleh = 128;
+						local titlew = 512;
+
+						local availableh = height - titleh;
+						local s = availableh / 23;
+
+						local bh = s * 4;
+						local bw = bh * 2;
+
+						local buttonwgap = bw / 4;
+
+						local bx1 = (width - (bw * 2) - buttonwgap) / 2;
+						local bx2 = bx1 + bw + buttonwgap;
+						local bx4 = (width - bw) / 2;
+
+						local by1 = s + s + titleh;
+						local by2 = by1 + s + bh;
+						local by3 = by2 + s + bh;
+						local by4 = by3 + s + bh;
+
+						SAVE0:set_screen_quad( bx1, by1, bw, bh );
+						SAVE1:set_screen_quad( bx1, by2, bw, bh );
+						SAVE2:set_screen_quad( bx1, by3, bw, bh );
+
+						SAVE3:set_screen_quad( bx2, by1, bw, bh );
+						SAVE4:set_screen_quad( bx2, by2, bw, bh );
+						SAVE5:set_screen_quad( bx2, by3, bw, bh );
+
+						BACK:set_screen_quad( bx4, by4, bw, 64 );
+
+						INSTRUCTIONS:set_screen_quad( (width - titlew)/2, 0, titlew, titleh );
+					end
+				</on_screen_resized>
+			</widget>
+		</gui>
+	</view>
+
+</screen>

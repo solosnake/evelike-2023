@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<skybox>
+		<texture positive_x="positive_x.bmp"/>
+		<texture positive_y="positive_y.bmp"/>
+		<texture positive_z="positive_z.bmp"/>
+		<texture negative_y="negative_y.bmp"/>
+		<texture negative_x="negative_x.bmp"/>
+		<texture negative_z="negative_z.bmp"/>
+</skybox>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<screen type="menu">
+	<view name="STARTMENUVIEW">
+		<gui version="1.0">
+			<widget
+				type="textbutton"
+				name="LANGUAGE"
+				x="100"
+				y="150"
+				width="256"
+				height="64"
+				text_id="LANGUAGE"
+				textsize="3"
+				style="bluestyle.xml">
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen("languages.xml")
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+			<widget
+				type="textbutton"
+				name="GRAPHICS"
+				x="100"
+				y="150"
+				width="256"
+				height="64"
+				text_id="GRAPHICS"
+				textsize="3"
+				style="bluestyle.xml">
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen("graphics.xml")
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+			<widget
+				type="textbutton"
+				name="BACK"
+				x="100"
+				y="200"
+				width="256"
+				height="64"
+				text_id="BACK"
+				textsize="3"
+				style="bluestyle.xml">
+				<on_clicked>
+					play_sound( clicksound )
+					exit_screen("title.xml")
+				</on_clicked>
+				<on_cursor_entered>
+					play_sound( mouseoversound )
+				</on_cursor_entered>
+			</widget>
+			<!-- Background widget -->
+			<widget
+				type="skyboxbackground"
+				name="BACKGROUND"
+				skyboxfile="pp.xml"
+				rotaterate="0.00001"
+				axisx="2.0"
+				axisy="1.0"
+				axisz="0.0">
+				<on_init>
+					mouseoversound = load_sound( "sub_bass_mouseover1.wav" )
+					clicksound = load_sound( "simple_resonant_click.wav" )
+				</on_init>
+				<on_key_pressed>
+				</on_key_pressed>
+				<on_screen_resized>
+					print( "SCREEN RESIZED" )
+					print( width )
+					print( height )
+					local buttonheight = 64;
+					local gap = 8;
+					local border = 32;
+					local buttonwidth = width / 2;
+					local centrex = width / 2;
+					local centrey = height / 5;
+					local left = centrex - (buttonwidth / 2);
+					local down = centrey;
+					local playx, playy = left, down;
+					local optsx, optsy = left, playy + buttonheight + gap;
+					local backx, backy = left, optsy + 2 * (buttonheight + gap);
+					LANGUAGE:set_screen_quad( playx, playy, buttonwidth, buttonheight )
+					GRAPHICS:set_screen_quad( optsx, optsy, buttonwidth, buttonheight )
+					BACK:set_screen_quad( backx, backy, buttonwidth, buttonheight )
+				</on_screen_resized>
+			</widget>
+		</gui>
+	</view>
+</screen>

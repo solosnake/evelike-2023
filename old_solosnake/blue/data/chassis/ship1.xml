@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chassises version="1.0">
+    <!---->
+    <chassis name="ship1" model="ts3_3x3" modelfile="ts3_3x3model.lua" emiss_col_0="-1" emiss_col_1="-1" emiss_intysrc_0a="CapacitorLvl" emiss_intysrc_0b="CapacitorLvl" emiss_intysrc_1a="Pulse0" emiss_intysrc_1b="CapacitorLvl" />
+</chassises>

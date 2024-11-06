@@ -1,0 +1,40 @@
+print( "DAIRE" )
+
+[2] = get_credits_balance()
+print( "$ = ")
+print([2])
+
+turn( 1, 1 )
+
+
+[5] = can_build( 0 )
+if [5] goto 18
+try_buy( 4, 10 )
+try_buy( 5, 10 )
+try_buy( 6, 10 )
+try_buy( 7, 10 )
+goto 1
+
+build( 0, 21, 20 )
+goto 1
+
+print("L 1")                        // This is the boot code for the built machine!
+print("L 2")
+[2] = get_msgs_count()
+if ![2] goto 1      
+move_msg_to_msgbuf(0)               // Move message 0 to the message buffer.
+clear_msgs()                        // Remove all messages.
+print("MSG")                        // Print that message was received.
+[2] = get_msgbuf_line_count()       // Store the length of msgbuf.
+print("Len=")                       // Print the length of
+print([2])                          // the message buffer.
+copy_code_from_msgbuf( 1, 12, [2] ) // Copy [2] lines beginning at line 1 to lines 12+.
+
+
+
+
+
+
+
+
+
